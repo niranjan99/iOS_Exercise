@@ -12,11 +12,12 @@
 		E241C7A0249F1A4500B19DBB /* FeedsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E241C79F249F1A4500B19DBB /* FeedsModelTests.swift */; };
 		E241C7A6249F1A9400B19DBB /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E241C7A3249F1A9400B19DBB /* MockData.swift */; };
 		E241C7A7249F1A9400B19DBB /* facts.json in Resources */ = {isa = PBXBuildFile; fileRef = E241C7A4249F1A9400B19DBB /* facts.json */; };
+		E241C7A9249F1F1600B19DBB /* FactsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E241C7A8249F1F1600B19DBB /* FactsViewModelTests.swift */; };
+		E241C7AB249F1F5000B19DBB /* MockFeedsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E241C7AA249F1F5000B19DBB /* MockFeedsService.swift */; };
 		E2CFCD71249CEB850053CC99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CFCD70249CEB850053CC99 /* AppDelegate.swift */; };
 		E2CFCD73249CEB850053CC99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CFCD72249CEB850053CC99 /* SceneDelegate.swift */; };
 		E2CFCD7A249CEB880053CC99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CFCD79249CEB880053CC99 /* Assets.xcassets */; };
 		E2CFCD7D249CEB880053CC99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CFCD7B249CEB880053CC99 /* LaunchScreen.storyboard */; };
-		E2CFCD88249CEB880053CC99 /* iOS_ExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CFCD87249CEB880053CC99 /* iOS_ExerciseTests.swift */; };
 		E2CFCD93249CEB880053CC99 /* iOS_ExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CFCD92249CEB880053CC99 /* iOS_ExerciseUITests.swift */; };
 		E2CFCDA1249CED260053CC99 /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CFCDA0249CED260053CC99 /* DataTableViewCell.swift */; };
 		E2CFCDB3249CED450053CC99 /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CFCDA5249CED450053CC99 /* RequestService.swift */; };
@@ -54,6 +55,8 @@
 		E241C79F249F1A4500B19DBB /* FeedsModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsModelTests.swift; sourceTree = "<group>"; };
 		E241C7A3249F1A9400B19DBB /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		E241C7A4249F1A9400B19DBB /* facts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = facts.json; sourceTree = "<group>"; };
+		E241C7A8249F1F1600B19DBB /* FactsViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsViewModelTests.swift; sourceTree = "<group>"; };
+		E241C7AA249F1F5000B19DBB /* MockFeedsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFeedsService.swift; sourceTree = "<group>"; };
 		E2CFCD6D249CEB850053CC99 /* iOS_Exercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Exercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CFCD70249CEB850053CC99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2CFCD72249CEB850053CC99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +64,6 @@
 		E2CFCD7C249CEB880053CC99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2CFCD7E249CEB880053CC99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2CFCD83249CEB880053CC99 /* iOS_ExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_ExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2CFCD87249CEB880053CC99 /* iOS_ExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_ExerciseTests.swift; sourceTree = "<group>"; };
 		E2CFCD89249CEB880053CC99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2CFCD8E249CEB880053CC99 /* iOS_ExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_ExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CFCD92249CEB880053CC99 /* iOS_ExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_ExerciseUITests.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				E241C7A3249F1A9400B19DBB /* MockData.swift */,
+				E241C7AA249F1F5000B19DBB /* MockFeedsService.swift */,
 				E241C7A4249F1A9400B19DBB /* facts.json */,
 			);
 			path = Mocks;
@@ -138,11 +141,11 @@
 			children = (
 				E2CFCD70249CEB850053CC99 /* AppDelegate.swift */,
 				E2CFCD72249CEB850053CC99 /* SceneDelegate.swift */,
-				E2CFCDA2249CED310053CC99 /* View */,
-				E2CFCDAB249CED450053CC99 /* Extensions */,
 				E2CFCDAE249CED450053CC99 /* Model */,
-				E2CFCDA3249CED450053CC99 /* Network */,
+				E2CFCDA2249CED310053CC99 /* View */,
 				E2CFCDB1249CED450053CC99 /* ViewModel */,
+				E2CFCDA3249CED450053CC99 /* Network */,
+				E2CFCDAB249CED450053CC99 /* Extensions */,
 				E2CFCD79249CEB880053CC99 /* Assets.xcassets */,
 				E2CFCD7E249CEB880053CC99 /* Info.plist */,
 			);
@@ -153,8 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				E241C7A1249F1A9400B19DBB /* Mocks */,
-				E2CFCD87249CEB880053CC99 /* iOS_ExerciseTests.swift */,
 				E241C79F249F1A4500B19DBB /* FeedsModelTests.swift */,
+				E241C7A8249F1F1600B19DBB /* FactsViewModelTests.swift */,
 				E2CFCD89249CEB880053CC99 /* Info.plist */,
 			);
 			path = iOS_ExerciseTests;
@@ -387,8 +390,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2CFCD88249CEB880053CC99 /* iOS_ExerciseTests.swift in Sources */,
 				E241C7A6249F1A9400B19DBB /* MockData.swift in Sources */,
+				E241C7A9249F1F1600B19DBB /* FactsViewModelTests.swift in Sources */,
+				E241C7AB249F1F5000B19DBB /* MockFeedsService.swift in Sources */,
 				E241C7A0249F1A4500B19DBB /* FeedsModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

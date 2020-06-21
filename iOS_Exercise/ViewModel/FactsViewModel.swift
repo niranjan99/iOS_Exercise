@@ -7,9 +7,8 @@
 //
 
 import Foundation
-
+import UIKit
 class FactsViewModel{
-    
     let service = RequestService()
     var reloadList = {() -> () in }
     public var feedData : FeedsModel? {
@@ -28,8 +27,6 @@ class FactsViewModel{
                }
             }
     }
-    
-    
 }
 
 
