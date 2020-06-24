@@ -14,17 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-//        window = UIWindow(frame:UIScreen.main.bounds)
-//        window?.rootViewController = UINavigationController(rootViewController: DataViewController())
-//        window?.makeKeyAndVisible()
-//
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        let mainController = DataViewController() as UIViewController
-//        let navigationController = UINavigationController(rootViewController: mainController)
-//        navigationController.navigationBar.isTranslucent = false
-//        self.window?.rootViewController = navigationController
-//        self.window?.makeKeyAndVisible()
+        if #available(iOS 13.0, *) { } else {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let mainViewController = DataViewController()
+            let mainNavigationController = UINavigationController(rootViewController: mainViewController)
+            self.window!.rootViewController = mainNavigationController
+            self.window!.makeKeyAndVisible()
+        }
         return true
     }
 

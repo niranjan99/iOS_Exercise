@@ -10,25 +10,26 @@ import UIKit
 
 class DataViewController: UIViewController {
 
-     var viewModel = FactsViewModel()
-     let contactsTableView = UITableView()
-     var refreshControl = UIRefreshControl()
-     var activityView = UIActivityIndicatorView()
+    let viewModel = FactsViewModel()
+    let contactsTableView = UITableView()
+    var refreshControl = UIRefreshControl()
+    var activityView = UIActivityIndicatorView()
+    
       override func viewDidLoad() {
          super.viewDidLoad()
-         setupView()
+        view.backgroundColor = .white
+        setupView()
      }
+
     func setupView(){
         initTableView()
         showActivityIndicator()
         viewModel.loadData()
         reloadTableView()
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
         contactsTableView.addSubview(refreshControl)
-        
     }
-   @objc func refresh(_ sender: AnyObject) {
+   @objc func refreshData(_ sender: AnyObject) {
          viewModel.loadData()
       }
    func reloadTableView() {
@@ -43,17 +44,16 @@ class DataViewController: UIViewController {
       }
 
    func initTableView(){
-         view.addSubview(contactsTableView)
-         contactsTableView.translatesAutoresizingMaskIntoConstraints = false
-         contactsTableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true
-         contactsTableView.leftAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leftAnchor).isActive = true
-         contactsTableView.rightAnchor.constraint(equalTo:view.safeAreaLayoutGuide.rightAnchor).isActive = true
-         contactsTableView.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-         contactsTableView.register(DataTableViewCell.self, forCellReuseIdentifier: "DataTableCell")
-         contactsTableView.delegate = self
-         contactsTableView.dataSource = self
-
+       view.addSubview(contactsTableView)
+    contactsTableView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0, enableInsets: false)
+       contactsTableView.register(DataTableViewCell.self, forCellReuseIdentifier: "DataTableCell")
+       contactsTableView.delegate = viewModel
+       contactsTableView.dataSource = viewModel
+       contactsTableView.estimatedRowHeight = 150
+         contactsTableView.rowHeight = UITableView.automaticDimension
+       contactsTableView.translatesAutoresizingMaskIntoConstraints = false
    }
+    
    func showActivityIndicator() {
        activityView = UIActivityIndicatorView(style: .large)
        activityView.center = view.center
@@ -61,27 +61,9 @@ class DataViewController: UIViewController {
        activityView.startAnimating()
        contactsTableView.addSubview(activityView)
    }
-
+    
    func hideActivityIndicator(){
-           activityView.stopAnimating()
+        activityView.stopAnimating()
    }
   }
-    extension DataViewController: UITableViewDelegate {
-        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-                return UITableView.automaticDimension
-            }
-    }
-
-    extension DataViewController: UITableViewDataSource{
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.feedData?.rows?.count ?? 0
-        }
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DataTableCell", for: indexPath) as! DataTableViewCell
-            cell.setData = viewModel.feedData?.rows?[indexPath.row]
-            return cell
-        }
-
-}
 

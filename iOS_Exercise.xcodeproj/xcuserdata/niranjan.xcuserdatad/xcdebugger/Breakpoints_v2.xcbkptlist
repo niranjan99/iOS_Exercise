@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C0206F4A-0D06-4C75-B830-3D940C619BFD"
+            uuid = "0D293E1B-7815-4BD0-B2A7-78C64065DB53"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iOS_Exercise/View/DataViewController.swift"
+            filePath = "iOS_Exercise/Extensions/ImageView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "refresh(_:)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "downloadImageFromURL(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E1EB4FC-11A7-40C7-9AC1-EFDEF88F868F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS_Exercise/Extensions/ImageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "downloadImageFromURL(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
